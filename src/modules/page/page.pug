@@ -1,0 +1,33 @@
+.page
+  .page__container
+    .page__head
+      .page__left
+        img.page__logo(src=require('src/img/logo.png'))
+        .page__cta Производство моечных машин
+      .page__right
+        .page__online(style='background-image: url(img/sprite.svg#' + require('src/img/online.sprite.svg').id + ')') online
+        .page__contacts
+          a.page__phone(href='tel:79042687777') +7 (904) 268-77-77
+          .page__hours пн-пт #[span / 09:00 - 18:00]
+
+    .page__main
+      .page__title #[b #[span Бесплатно] подберите]#[br] подходящую вам моечную#[br] машину #[b: span за 3 минуты]
+      .page__subtitle Ответьте на 6 вопросов и #[b получите#[br] подарок] на сумму 20 000 рубле
+      a.page__button(style='background-image: url(img/sprite.svg#' + require('src/img/button.sprite.svg').id + ')') ПРОЙТИ ТЕСТ
+      img.page__product1(src=require('src/img/product_01.png'))
+      img.page__product2(src=require('src/img/product_02.png'))
+
+    .page__footer
+      .page__items
+        .page__item
+          +the_svg(require('src/img/01.sprite.svg'))
+          div Гарантия#[br] на моечные#[br] машины 5 лет
+        .page__item
+          +the_svg(require('src/img/02.sprite.svg'))
+          div Нержавеющая#[br] сталь AISI 430
+        .page__item
+          +the_svg(require('src/img/03.sprite.svg'))
+          div Высокопроизводи-#[br] тельный итальянский#[br] насос Aquarto
+        .page__item
+          +the_svg(require('src/img/04.sprite.svg'))
+          div Уникальная#[br] технология - может#[br] мыть без химии

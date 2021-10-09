@@ -1,0 +1,258 @@
+@mixin mobile() {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+.page {
+  $this: &;
+
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  background: url(../../img/background.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &__container {
+    min-height: 100vh;
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    flex-wrap: wrap;
+    @include mobile() {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__left {
+    margin: 10px auto 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 140px;
+    height: auto;
+    @include mobile() {
+      max-width: 100px;
+    }
+  }
+
+  &__cta {
+    padding-left: 20px;
+    margin-left: 20px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 300;
+    border-left: 1px solid rgba(#000, .06);
+    @include mobile() {
+      font-size: 13px;
+      height: 29px;
+    }
+  }
+
+  &__online {
+    font-size: 13px;
+    //border: 1px solid rgba(#181818, .06);
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    background-size: contain;
+    background-position: 50% 50%;
+
+
+    &:before {
+      content: '';
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      background: #21aa31;
+      margin-right: 5px;
+    }
+  }
+
+  &__contacts {
+    text-align: right;
+  }
+
+  &__phone {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    @include mobile() {
+      font-size: 18px;
+    }
+  }
+
+  &__hours {
+    font-size: 13px;
+    @include mobile() {
+      font-size: 11px;
+    }
+
+    span {
+      font-family: 'Gilroy', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      @include mobile() {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__main {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile() {
+      padding-bottom: 280px;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: 50px;
+    @include mobile() {
+      font-size: 30px;
+      margin-bottom: 20px;
+      line-height: 1.15;
+      max-width: 280px;
+      br {
+        display: none;
+      }
+    }
+
+    b {
+      font-weight: 700;
+    }
+
+    span {
+      color: #2c6ae8;
+    }
+  }
+
+  &__subtitle {
+    font-size: 23px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-bottom: 50px;
+    @include mobile() {
+      font-size: 17px;
+      max-width: 200px;
+      margin-bottom: 20px;
+      br {
+        display: none;
+      }
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    width: 260px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 auto;
+    cursor: pointer;
+    //box-shadow: 0px 19px 68px 0px rgba(255, 216, 36, 0.52);
+    filter: drop-shadow(0px 19px 68px rgb(255 216 36 / 52%));
+    background-size: contain;
+    background-position: 50% 50%;
+  }
+
+  &__product1 {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    margin-right: 212px;
+    margin-top: 27px;
+    pointer-events: none;
+    @include mobile() {
+      width: 210px;
+      height: auto;
+      top: auto;
+      bottom: 54px;
+      margin-right: -45px;
+    }
+  }
+
+  &__product2 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: 245px;
+    margin-top: 36px;
+    pointer-events: none;
+    @include mobile() {
+      width: 210px;
+      height: auto;
+      top: auto;
+      bottom: -21px;
+      margin-left: -43px;
+    }
+  }
+
+  &__footer {
+    padding-bottom: 30px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    @include mobile() {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    @include mobile() {
+      width: 220px;
+      margin-top: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    svg {
+      margin-right: 20px;
+      fill: #2c6ae8;
+      width: 34px;
+      height: 34px;
+    }
+  }
+}
