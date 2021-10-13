@@ -15,5 +15,32 @@ html
   body(onunload="")
     block body
 
-    script.
-      (function ( w, dE ) {function u() {dE.style.setProperty('--scrollbar-width', w.innerWidth - dE.clientWidth + "px");}w.addEventListener('resize', u);u()})(window, document.documentElement)
+    div.
+      <!-- Marquiz script start -->
+      <script>
+      (function(w, d, s, o){
+      var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+      if (document.readyState !== 'loading') Marquiz.init(o);
+      else document.addEventListener("DOMContentLoaded", function() {
+      Marquiz.init(o);
+      });
+      };
+      d.head.insertBefore(j, d.head.firstElementChild);
+      })(window, document, 'script', {
+      host: '//quiz.marquiz.ru',
+      region: 'eu',
+      id: '613866f39dc4e00045796060',
+      autoOpen: false,
+      autoOpenFreq: 'once',
+      openOnExit: false,
+      disableOnMobile: false
+      }
+      );
+      </script>
+      <!-- Marquiz script end -->
+
+      <script>(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Pop', {id: '613866f39dc4e00045796060', title: 'Ответьте на 6 вопросов ', text: 'Подбор моечной машины за 3 минуты', delay: 20, textColor: '#363636', bgColor: '#83d2fb', svgColor: '#363636', closeColor: '#ffffff', bonusCount: 0, bonusText: '', type: 'full', position: 'position_bottom'})</script>
+
+
+
+

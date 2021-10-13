@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1633863317454" rel="stylesheet"></head>
+  <link href="style.css?1633978739638" rel="stylesheet"></head>
   <body onunload="">
     <div class="page">
       <div class="page__container">
@@ -24,7 +24,8 @@
         </div>
         <div class="page__main">
           <div class="page__title"><b><span>Бесплатно</span> подберите</b><br> подходящую вам моечную<br> машину <b><span>за 3 минуты</span></b></div>
-          <div class="page__subtitle">Ответьте на 6 вопросов и <b>получите<br> подарок</b> на сумму 20 000 рубле</div><a class="page__button" style="background-image: url(img/sprite.svg#button-usage)">ПРОЙТИ ТЕСТ</a><img class="page__product1" src="img/img_product_01.png"><img class="page__product2" src="img/img_product_02.png">
+          <div class="page__subtitle">Ответьте на 6 вопросов и <b>получите<br> подарок</b> на сумму 20 000 рубле</div>
+          <button class="page__button" style="background-image: url(img/sprite.svg#button-usage)" onclick="Marquiz.showModal('613866f39dc4e00045796060')">ПРОЙТИ ТЕСТ</button><img class="page__product1" src="img/img_product_01.png"><img class="page__product2" src="img/img_product_02.png">
         </div>
         <div class="page__footer">
           <div class="page__items">
@@ -56,6 +57,31 @@
         </div>
       </div>
     </div>
-    <script>(function ( w, dE ) {function u() {dE.style.setProperty('--scrollbar-width', w.innerWidth - dE.clientWidth + "px");}w.addEventListener('resize', u);u()})(window, document.documentElement)</script>
+    <div>
+      <!-- Marquiz script start -->
+      <script>
+      (function(w, d, s, o){
+      var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+      if (document.readyState !== 'loading') Marquiz.init(o);
+      else document.addEventListener("DOMContentLoaded", function() {
+      Marquiz.init(o);
+      });
+      };
+      d.head.insertBefore(j, d.head.firstElementChild);
+      })(window, document, 'script', {
+      host: '//quiz.marquiz.ru',
+      region: 'eu',
+      id: '613866f39dc4e00045796060',
+      autoOpen: false,
+      autoOpenFreq: 'once',
+      openOnExit: false,
+      disableOnMobile: false
+      }
+      );
+      </script>
+      <!-- Marquiz script end -->
+      
+      <script>(function(t, p) {window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {Marquiz.add([t, p])})})('Pop', {id: '613866f39dc4e00045796060', title: 'Ответьте на 6 вопросов ', text: 'Подбор моечной машины за 3 минуты', delay: 20, textColor: '#363636', bgColor: '#83d2fb', svgColor: '#363636', closeColor: '#ffffff', bonusCount: 0, bonusText: '', type: 'full', position: 'position_bottom'})</script>
+    </div>
   <script defer src="app.js"></script></body>
 </html>
